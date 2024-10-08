@@ -24,7 +24,7 @@ app.post('/send-email', async (req, res) => {
     <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Vcriate React Assessment Results</title>
+      <title>Assessment Results</title>
       <style>
         body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
         .container { max-width: 600px; margin: 0 auto; padding: 20px; }
@@ -36,35 +36,19 @@ app.post('/send-email', async (req, res) => {
     <body>
       <div class="container">
         <div class="header">
-          <h1>Vcriate React Assessment Results</h1>
+          <h1>Assessment Results</h1>
         </div>
         <div class="content">
           <p>Dear ${userName},</p>
-          <p>Thank you for completing the Vcriate React Assessment. We appreciate your time and effort in showcasing your React skills.</p>
-          <p>Here are your results:</p>
+          <p>Thank you for completing the assessment. Here are your results:</p>
           <ul>
             <li>Score: ${score} out of ${totalQuestions}</li>
             <li>Percentage: ${((score / totalQuestions) * 100).toFixed(2)}%</li>
           </ul>
-          <p>This assessment evaluated your understanding of key React concepts, including:</p>
-          <ul>
-            <li>Component-based architecture</li>
-            <li>State and props management</li>
-            <li>Hooks and lifecycle methods</li>
-            <li>JSX syntax and rendering</li>
-            <li>React ecosystem and best practices</li>
-          </ul>
-          <p>We encourage you to continue enhancing your React skills. Here are some resources that might be helpful:</p>
-          <ul>
-            <li><a href="https://reactjs.org/docs/getting-started.html">Official React Documentation</a></li>
-            <li><a href="https://react.dev/">React Dev</a></li>
-            <li><a href="https://www.freecodecamp.org/news/tag/react/">FreeCodeCamp React Articles</a></li>
-          </ul>
-          <p>If you have any questions about your results or would like further feedback, please don't hesitate to contact us.</p>
-          <p>Best regards,<br>The Vcriate Team</p>
+          <p>Best regards,<br>The Team</p>
         </div>
         <div class="footer">
-          <p>&copy; 2023 Vcriate. All rights reserved.</p>
+          <p>&copy; 2023. All rights reserved.</p>
         </div>
       </div>
     </body>
@@ -74,7 +58,7 @@ app.post('/send-email', async (req, res) => {
   const mailOptions = {
     from: process.env.EMAIL_USER,
     to: userEmail,
-    subject: 'Your Vcriate React Assessment Results',
+    subject: 'Your Assessment Results',
     html: htmlContent
   };
 
