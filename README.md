@@ -76,6 +76,7 @@ EMAIL_PASS=your-email-password
 
 3. Open your browser and navigate to `http://localhost:3000`
 
+
 ## Project Structure
 
 - `/src`: Contains the React application source code
@@ -83,4 +84,9 @@ EMAIL_PASS=your-email-password
 - `/styles`: CSS files for styling components
 - `/public`: Public assets and HTML template
 - `/server`: Backend server code
+
+## Email
+* After submitting the Exam User Will receive Mail like this 
+*  as i didnt hosted backend so just added image as reference
+![image](https://github.com/user-attachments/assets/8ca2168b-e5f4-4c33-8bf9-100333efe120)
 
