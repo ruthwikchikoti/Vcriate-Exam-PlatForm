@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+# Exam Platform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An interactive online examination platform built with React.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+1. [Project Overview](#project-overview)
+2. [Features](#features)
+3. [Technologies Used](#technologies-used)
+4. [Setup](#setup)
+5. [Running the Application](#running-the-application)
+6. [Project Structure](#project-structure)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Project Overview
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The Exam Platform is a web-based application designed to facilitate online examinations. It provides a secure and user-friendly environment for conducting timed assessments with features like fullscreen mode, violation warnings, and immediate result calculation.
 
-### `npm test`
+## Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- User authentication and details collection
+- Timed exams with a countdown timer
+- Multiple-choice questions (MCQ) support
+- Fullscreen mode to prevent cheating
+- Violation warnings for leaving the exam window
+- Immediate result calculation and display
+- Email service for sending exam results
+- Responsive design for various devices
 
-### `npm run build`
+## Technologies Used
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- React.js
+- Node.js
+- Express.js
+- Nodemailer
+- CSS3
+- HTML5
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Setup
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To set up the project locally, follow these steps:
 
-### `npm run eject`
+1. Clone the repository:
+```shell
+    git clone https://github.com/your-username/exam-platform.git cd exam-platform
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. Install dependencies:
+```shell
+    npm install
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Create a `.env` file in the root directory and add the following environment variables:
+```
+EMAIL_USER=your-email@gmail.com 
+EMAIL_PASS=your-email-password
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4. Set up the backend:
+```shell
+    cd backend
+    npm install
+```
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Running the Application
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Start the backend server:  `cd server node server.js`
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. In a new terminal, start the React application:
+```shell
+    npm start
+```
 
-### Analyzing the Bundle Size
+3. Open your browser and navigate to `http://localhost:3000`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Project Structure
 
-### Making a Progressive Web App
+- `/src`: Contains the React application source code
+- `/components`: React components (e.g., ExamWindow, Timer, MCQuestions)
+- `/styles`: CSS files for styling components
+- `/public`: Public assets and HTML template
+- `/server`: Backend server code
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

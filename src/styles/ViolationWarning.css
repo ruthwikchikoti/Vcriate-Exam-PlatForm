@@ -1,0 +1,39 @@
+:root {
+    --warning-color: #e67e22;
+    --error-color: #e74c3c;
+    --background-color: rgba(231, 126, 34, 0.1);
+    --text-color: #2c3e50;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --border-radius: 10px;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.violation-warning {
+    background: rgba(231, 126, 34, 0.1);
+    border-left: 5px solid var(--warning-color);
+    padding: 20px 25px;
+    border-radius: var(--border-radius);
+    color: var(--text-color);
+    margin: 20px 0;
+    box-shadow: var(--shadow);
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+.violation-warning p {
+    font-size: 1rem;
+    margin: 0;
+    animation: fadeInText 1s ease-in-out;
+}
+
+@keyframes fadeInText {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
